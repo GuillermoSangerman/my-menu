@@ -7,7 +7,7 @@ function Navegador (){
     <img src="" alt="" className="size-8 hover:size-10"/>
   </button>
   <h1 className="px-96 text-center font-black text-4xl" type="text">
-    Meal Category
+    All Category
   </h1>
   </nav>
     )
