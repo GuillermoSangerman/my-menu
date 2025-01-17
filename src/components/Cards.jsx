@@ -1,23 +1,18 @@
 import React, {useEffect, useState} from "react";
-import { fetchData } from "../App"
 import { CardsItem } from "./CardsItem";
+import { useData } from "../hooks/useData";
 export function Cards({ category}) {
 
-    const url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
-    const [categoryFood, setCategoryFood] = useState([]);
-    useEffect(() => {
-      fetchData(url + category)
-        .then(data => setCategoryFood(data.meals))
-        .catch(error => console.error(error))
-    }, [category])
+    const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+    const {data} = useData(url)
     
   return (
     <>
     
-      {categoryFood &&
-      categoryFood.map(categoryItem =>
+      {data?.meals &&
+      data?.meals.map(categoryItem =>
         
-        <li className=" mt-20 ">
+        <li className=" m-0 ">
         <CardsItem
         key={categoryItem.strMeal}
         categoryItem={categoryItem}
