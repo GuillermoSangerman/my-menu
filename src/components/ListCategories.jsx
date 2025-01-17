@@ -2,7 +2,7 @@ import React from 'react'
 
 export function ListCategories({ category, onClick }) {
 
-    const { idCategory, strCategory, strCategoryThumb } = category
+    const {  strCategory, strCategoryThumb } = category
 
     return (
         <>

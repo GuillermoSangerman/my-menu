@@ -6,7 +6,7 @@ function Navegador({ onClick, category }) {
       <button onClick={onClick} className=" text-4xl" type="onClick">
         &#9776;
       </button>
-      <h1 className=" font-black text-4xl" type="text">
+      <h1 className=" font-black text-4xl " type="text">
         {category}
       </h1>
     </nav>

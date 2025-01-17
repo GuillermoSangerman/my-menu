@@ -15,7 +15,7 @@ export async function fetchData(url) {
 export default function App() {
 
   const [category, setCategory] = useState('Beef')
-  const [openSideBar, setOpenSideBar] = useState(false)
+  const [openSideBar, setOpenSideBar] = useState(true)
   const toggleSideBar = () => {
     setOpenSideBar((prevState) => !prevState)
   }
@@ -26,6 +26,7 @@ export default function App() {
     {openSideBar &&
       <SideBar 
       onClick={setCategory}
+      onClose={toggleSideBar}
     />
     }
       <div className="grid grid-cols-1">
